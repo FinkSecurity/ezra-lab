@@ -70,3 +70,8 @@ memory/archive/
 *.flac
 *.log
 .DS_Store
+
+# Daily memory and runtime files - keep local only
+memory/
+daily/
+memory/archive/
