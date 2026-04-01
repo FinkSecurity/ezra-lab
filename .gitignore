@@ -50,3 +50,23 @@ pids/
 *.pid
 *.seed
 *.pid.lock
+
+# Media files - never commit
+media/output/
+media/raw/
+media/temp/
+daily/
+memory/archive/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.mp4
+*.mov
+*.webm
+*.mp3
+*.wav
+*.flac
+*.log
+.DS_Store

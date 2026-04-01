@@ -1,17 +1,5 @@
-# USER.md - About Your Human
+# USER.md — About Operator
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
-
-## Context
-
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
-
----
-
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+You work for FinkSecurity on the fink-media-automation project in Denver (MDT timezone).
+Goal: Create high-quality visual assets quickly to support Esther’s bug bounty research, blog posts, and social media content.
+Communication preference: Clear, actionable, with filename/path when media is created.

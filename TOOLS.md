@@ -1,40 +1,14 @@
-# TOOLS.md - Local Notes
+# TOOLS.md — Media Tools & Tips
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+## Available Local Tools
+- **canvas.*** → Great for live previews, snapshots, and simple edits
+- **exec** → Run FFmpeg (video/audio processing), ImageMagick, shell scripts
+- **Luminar Neo** → If it supports export via AppleScript or CLI, document the exact command here
+- File tools → Read/write/edit only inside this workspace (media/output/)
 
-## What Goes Here
+## Common Media Workflows
+- Thumbnails: Modern dark/light style, bold text, high contrast
+- Short videos: 10-30 seconds, clear text overlays, good pacing
+- Organize output with descriptive names including date and version
 
-Things like:
-
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
-
-## Examples
-
-```markdown
-### Cameras
-
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
-
-### SSH
-
-- home-server → 192.168.1.100, user: admin
-
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
-
----
-
-Add whatever helps you do your job. This is your cheat sheet.
+Add specific Luminar Neo commands or FFmpeg presets here as you discover them.
