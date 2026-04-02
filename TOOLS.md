@@ -61,3 +61,25 @@ ffmpeg -i media/raw/input.mp4 \
 - Never commit binary files (png, mp4, jpg) to git
 - Use descriptive filenames with dates: `xss-thumbnail-20260401.png`
 - Brand colors above match finksecurity.com and estherops.tech
+
+## Luminar Neo (AppleScript Control)
+Version 1.26.1 — confirmed scriptable via AppleScript.
+
+### Basic AppleScript pattern
+```applescript
+tell application "Luminar Neo"
+    open POSIX file "/Users/afink/tools/fink-media-automation/media/assets/base.jpg"
+end tell
+```
+
+### Export via AppleScript (example)
+```applescript
+tell application "Luminar Neo"
+    export current document to POSIX file "/Users/afink/tools/fink-media-automation/media/output/result.jpg"
+end tell
+```
+
+Use osascript to run AppleScript from exec:
+```bash
+osascript -e 'tell application "Luminar Neo" to ...'
+```
