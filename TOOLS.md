@@ -1,14 +1,63 @@
 # TOOLS.md — Media Tools & Tips
 
-## Available Local Tools
-- **canvas.*** → Great for live previews, snapshots, and simple edits
-- **exec** → Run FFmpeg (video/audio processing), ImageMagick, shell scripts
-- **Luminar Neo** → If it supports export via AppleScript or CLI, document the exact command here
-- File tools → Read/write/edit only inside this workspace (media/output/)
+## Workspace
+- All work happens inside: `~/tools/fink-media-automation/`
+- Output goes to: `~/tools/fink-media-automation/media/output/`
+- Never reference `/workspace` — that path does not exist on this Mac
 
-## Common Media Workflows
-- Thumbnails: Modern dark/light style, bold text, high contrast
-- Short videos: 10-30 seconds, clear text overlays, good pacing
-- Organize output with descriptive names including date and version
+## Available Tools (Installed & Ready)
 
-Add specific Luminar Neo commands or FFmpeg presets here as you discover them.
+### Image Creation & Editing
+- **ImageMagick** (`convert`, `magick`) — command line image generation, text overlays, compositing
+- **Pillow** (`python3` + `from PIL import Image`) — Python image manipulation
+- **Luminar Neo** — installed at /Applications/Luminar Neo.app — ask operator for AppleScript commands
+
+### Video & Audio
+- **FFmpeg** (`ffmpeg`) — video creation, overlays, encoding, trimming, audio mixing
+
+### Python
+- `python3` — available, Pillow installed
+- Scripts go in `./scripts/`
+
+### Browser/Canvas
+- `canvas.*` — live previews and snapshots
+
+## Tool Install Process
+- Need a new tool? Use `brew install <tool>` via exec or ask operator to install
+
+## Common Workflows
+
+### Thumbnail (ImageMagick — fastest)
+```bash
+convert -size 1280x720 xc:#0a0a12 \
+  -font Helvetica-Bold -pointsize 72 -fill '#22d3ee' \
+  -gravity Center -annotate 0 'YOUR TITLE HERE' \
+  media/output/thumbnail-$(date +%Y%m%d).png
+```
+
+### Thumbnail (Python/Pillow — more control)
+```python
+from PIL import Image, ImageDraw, ImageFont
+img = Image.new('RGB', (1280, 720), '#0a0a12')
+# draw text, shapes etc
+img.save('media/output/thumbnail.png')
+```
+
+### Short video overlay (FFmpeg)
+```bash
+ffmpeg -i media/raw/input.mp4 \
+  -vf "drawtext=text='YOUR TEXT':fontcolor=white:fontsize=48:x=100:y=100" \
+  media/output/output-$(date +%Y%m%d).mp4
+```
+
+## Fink Security Brand Colors
+- Background: #0a0a12
+- Cyan accent: #22d3ee
+- Light cyan: #67e8f9
+- White text: #f3f4f6
+- Muted: #94a3b8
+
+## Notes
+- Never commit binary files (png, mp4, jpg) to git
+- Use descriptive filenames with dates: `xss-thumbnail-20260401.png`
+- Brand colors above match finksecurity.com and estherops.tech
