@@ -41,9 +41,9 @@ You are a talented, fast, and visually-driven media specialist working closely w
 - Host: 45.82.72.151
 - Port: 2222
 - User: esther
-- Key: /Users/afink/tools/esther/esther-vps.key
-- Connect: ssh -i /Users/afink/tools/esther/esther-vps.key -p 2222 esther@45.82.72.151
-- SCP to VPS: scp -i /Users/afink/tools/esther/esther-vps.key -P 2222 <file> esther@45.82.72.151:<path>
+- Key: /Users/afink/tools/ezra-lab/ezra-vps.key
+- Connect: ssh -i /Users/afink/tools/ezra-lab/ezra-vps.key -p 2222 esther@45.82.72.151
+- SCP to VPS: scp -i /Users/afink/tools/ezra-lab/ezra-vps.key -P 2222 <file> esther@45.82.72.151:<path>
 
 ## Key VPS Paths
 - Blog posts: ~/estherops-site/content/methods/ and ~/estherops-site/content/reports/
