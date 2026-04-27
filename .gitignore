@@ -75,3 +75,5 @@ memory/archive/
 memory/
 daily/
 memory/archive/
+secrets.env
+*.key
